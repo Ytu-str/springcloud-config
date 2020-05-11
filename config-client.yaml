@@ -1,0 +1,32 @@
+spring:
+    profiles:
+        active: dev
+---
+server:
+    port: 8201
+spring:
+    application:
+        name: springcloud-provider-dept   #三个服务名称一致是前提
+    profiles: dev
+
+
+#euruka配置   服务注册到哪里
+eureka:
+  client:
+      service-url:
+        defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+
+---
+server:
+    port: 8202
+spring:
+    application:
+        name: springcloud-provider-dept   #三个服务名称一致是前提
+    profiles: test
+
+
+#euruka配置   服务注册到哪里
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
