@@ -8,7 +8,7 @@ server:
 spring:
     application:
     profiles: dev
-        name: springcloud-config-eureka
+        name: springcloud-config-eureka-7001
 #Eureka
 eureka:
     instance:
@@ -26,7 +26,7 @@ server:
 spring:
     application:
     profiles: test
-        name: springcloud-config-eureka
+        name: springcloud-config-eureka-7001
 #Eureka
 eureka:
     instance:
